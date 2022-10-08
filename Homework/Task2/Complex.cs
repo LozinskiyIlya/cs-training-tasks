@@ -31,7 +31,6 @@ namespace Task2
             return new Complex(abs * Math.Cos(radians), abs * Math.Sin(radians));
         }
 
-
         public static Complex operator -(Complex c) =>
             new Complex(-c.Real, -c.Imag);
 
@@ -43,7 +42,6 @@ namespace Task2
 
         public static Complex operator *(Complex a, Complex b) =>
             new Complex(a.Real * b.Real - a.Imag * b.Imag, a.Real * b.Imag + a.Imag * b.Real);
-
 
         public static Complex operator /(Complex a, Complex b)
         {

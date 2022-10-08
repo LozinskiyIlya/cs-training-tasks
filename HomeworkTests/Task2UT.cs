@@ -82,7 +82,7 @@ namespace HomeworkTests
             Assert.AreEqual(complex.Real, -1);
             Assert.AreEqual(complex.Imag, -1);
         }*/
-    
+
 
         // ************** //
         // Arg and Module //
@@ -114,6 +114,42 @@ namespace HomeworkTests
             Assert.AreEqual(complex.Arg, 0);
         }
 
+        // **************** //
+        // Unary operations //
+        // **************** //
+
+        [TestMethod("Unary minus")]
+        public void UnaryMinus()
+        {
+            var a = new Complex(1, 2);
+            Assert.AreEqual(-a, new Complex(-1, -2));
+
+            a = new Complex(0, 0);
+            Assert.AreEqual(-a, a);
+
+            a = new Complex(1.3333, 2 / 60);
+            Assert.AreEqual(-a, new Complex(-1.3333, -2 / 60));
+        }
+
+        // ********** //
+        // Аrithmetic //
+        // ********** //
+
+        [TestMethod("Sum")]
+        public void Sum()
+        {
+            var a = new Complex(-4, 2);
+            var b = new Complex(3.1, 0);
+            var c = a + b;
+            Assert.IsTrue(c.Real == -0.9);
+            Assert.AreEqual(c.Imag, 2);
+
+            a = new Complex(0, 0);
+            Assert.AreEqual(a + a, a);
+
+            b = new Complex(1, 2);
+            Assert.AreEqual(b + (-b), a);
+        }
 
     }
 }
