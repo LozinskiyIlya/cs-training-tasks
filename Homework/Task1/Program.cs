@@ -6,7 +6,7 @@ namespace Task1
 {
     public class Program
     {
-        private static readonly int DEFAULT_MATRIX_DIM = 1000;
+        private const int DEFAULT_MATRIX_DIM = 1000;
         private static readonly Stopwatch sw = new Stopwatch();
 
 
@@ -18,7 +18,7 @@ namespace Task1
             {
                 case 1:
                     // 2 square matrices, where n = l = m = args[0]
-                    dimensions = Enumerable.Repeat(int.Parse(args[0]), 3).ToArray();
+                    dimensions[0] = dimensions[1] = dimensions[2] = int.Parse(args[0]);
                     break;
                 case 2:
                     // n = m = args[0], l = args[1];
@@ -34,7 +34,7 @@ namespace Task1
                     break;
                 default:
                     // emtpy or wrong arguments count, 2 square matrices, where n = l = m = 1000
-                    dimensions = Enumerable.Repeat(DEFAULT_MATRIX_DIM, 3).ToArray();
+                    dimensions[0] = dimensions[1] = dimensions[2] = DEFAULT_MATRIX_DIM;
                     break;
             }
 
