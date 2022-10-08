@@ -31,6 +31,11 @@ namespace Task2
             return new Complex(abs * Math.Cos(radians), abs * Math.Sin(radians));
         }
 
+        public static Complex Zero()
+        {
+            return new Complex(0, 0);
+        }
+
         public static Complex operator -(Complex c) =>
             new Complex(-c.Real, -c.Imag);
 
@@ -46,7 +51,8 @@ namespace Task2
         public static Complex operator /(Complex a, Complex b)
         {
             var denom = b.Real * b.Real + b.Imag * b.Imag;
-            return new Complex((a.Real * b.Real + a.Imag * b.Imag) / denom, (a.Real * b.Imag - a.Imag * b.Real) / denom);
+            if (denom == 0) throw new DivideByZeroException();
+            return new Complex((a.Real * b.Real + a.Imag * b.Imag) / denom, (b.Real * a.Imag - a.Real * b.Imag) / denom);
         }
 
         public static bool operator ==(Complex a, Complex b)
@@ -74,16 +80,11 @@ namespace Task2
 
         public override int GetHashCode() => (Real, Imag).GetHashCode();
 
-        /*Класс должен иметь возможность преобразовывать комплексное число в строку
-        обычной записи комплексного числа.Строка, должна быть “красивая” (т.е. 1-2i, а не 1
-        + -2i, или 1, а не 1+0i, или 2i, а не 0+2i, или 1+i, а не 1+1i). Должна быть возможность
-        распечатки числа как Console.WriteLine(complex). Преобразование достигается при
-        помощи перегрузки метода ToString().*/
-
         public override string ToString()
         {
+            if (real == imag && imag == 0) return "0";
             string re = real == 0 ? "" : real.ToString();
-            string im = imag == 0 ? "" : imag == 1 ? "i" : imag.ToString() + "i";
+            string im = imag == 0 ? "" : imag == 1 ? "i" : imag == -1 ? "-i" : imag.ToString() + "i";
             string sign = imag > 0 ? "+" : "";
             return re + sign + im;
         }
