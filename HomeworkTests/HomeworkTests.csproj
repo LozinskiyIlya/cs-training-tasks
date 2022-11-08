@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Task4UT .cs" />
     <Compile Include="Task3UT.cs" />
     <Compile Include="Task2Body3DUT.cs" />
     <Compile Include="Task2UT.cs" />

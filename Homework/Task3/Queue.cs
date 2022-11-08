@@ -21,7 +21,7 @@ using Task2;
  */
 namespace Homework.Task3
 {
-    public interface IQueue
+    interface IQueue
     {
         int Count { get; }
         void Enqueue(Complex с);
