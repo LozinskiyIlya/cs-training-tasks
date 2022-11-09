@@ -7,6 +7,13 @@ namespace HomeworkTests
     public class Task6DictUT
 
     {
+        [TestCleanup]
+        public void cleanDict()
+        {
+            Dict.Instance().Clean();
+        }
+
+
         // **************** //
         //  Initialization  //
         // **************** //
@@ -16,6 +23,13 @@ namespace HomeworkTests
         {
             var d = Dict.Instance();
             Assert.AreNotEqual(0, d.Size());
+        }
+
+        [TestMethod("Should have only one instance")]
+        public void ShouldHaveOnlyOneInst()
+        {
+            var d = Dict.Instance();
+            Assert.AreEqual(d, Dict.Instance());
         }
 
         [TestMethod("Should have translation for default words")]
@@ -39,7 +53,6 @@ namespace HomeworkTests
             Assert.IsTrue(d.GetTranslations("разработчик").Contains("developer"));
         }
 
-
         [TestMethod("Should add value to existing pair")]
         public void ShouldAddValueToExistingPair()
         {
@@ -49,6 +62,17 @@ namespace HomeworkTests
             Assert.IsTrue(d.GetTranslations("developer").Contains("разработчик"));
             Assert.IsTrue(d.GetTranslations("developer").Contains("застройщик"));
             Assert.IsTrue(d.GetTranslations("застройщик").Contains("developer"));
+        }
+
+        [TestMethod("Should skip duplicates")]
+        public void ShouldSkipDuplicates()
+        {
+            var d = Dict.Instance();
+            d.Add("developer", "разработчик");
+            var oldSize = d.Size();
+            d.Add("developer", "разработчик");
+            d.Add("developer", "разработчик");
+            Assert.AreEqual(oldSize, d.Size());
         }
 
 

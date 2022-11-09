@@ -45,7 +45,14 @@ namespace Homework.Task6
             return translations.Count;
         }
 
-        public void Add(string word, string translation, bool addReverse)
+        // for testing only, can be private and accessed via reflection
+        public void Clean()
+        {
+            translations.Clear();
+            instance = null;
+        }
+
+        private void Add(string word, string translation, bool addReverse)
         {
             if (translations.ContainsKey(word))
             {

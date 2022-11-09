@@ -54,6 +54,7 @@
     <Compile Include="Task4\Stack.cs" />
     <Compile Include="Task5\PrimeSequence.cs" />
     <Compile Include="Task6\Dictionary.cs" />
+    <Compile Include="Task6\Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
