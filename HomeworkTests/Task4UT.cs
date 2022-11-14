@@ -55,6 +55,18 @@ namespace HomeworkTests
             Assert.AreEqual(items, s.Count);
         }
 
+        [TestMethod("Push many items")]
+        public void PushManyItems()
+        {
+            var items = 1000 * 1000;
+            Stack<string> s = new Stack<string>();
+            for (int i = 0; i < items; i++)
+            {
+                s.Push(i.ToString());
+            }
+            Assert.AreEqual(items, s.Count);
+        }
+
 
         // **********//
         //    Top    //
