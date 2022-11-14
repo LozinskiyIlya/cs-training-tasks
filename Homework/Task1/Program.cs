@@ -108,7 +108,7 @@ namespace Task1
             return c;
         }
 
-        public static void Mains(string[] args)
+        public static void __Main(string[] args)
         {
             var dim = ParseArgs(args);
             Console.WriteLine("Multiplying matrices...");
