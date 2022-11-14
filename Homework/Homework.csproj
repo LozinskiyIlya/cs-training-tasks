@@ -50,6 +50,7 @@
     <Compile Include="Task2\3D\Sphere.cs" />
     <Compile Include="Task2\3D\Tetrahedron.cs" />
     <Compile Include="Task2\Complex.cs" />
+    <Compile Include="Task3\Queue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
