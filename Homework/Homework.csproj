@@ -55,9 +55,12 @@
     <Compile Include="Task5\PrimeSequence.cs" />
     <Compile Include="Task6\Dictionary.cs" />
     <Compile Include="Task6\Service.cs" />
+    <Compile Include="Task7\CSVParser.cs" />
+    <Compile Include="Task7\Employee.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Task7\file.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ namespace Homework.Task6
         private Dict dictionary = Dict.Instance();
         private bool done;
 
-        public static void Main(string[] args)
+        public static void __Main(string[] args)
         {
             new Service().Start();
         }
