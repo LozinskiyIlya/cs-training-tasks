@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Homework.Task7
@@ -35,10 +34,14 @@ namespace Homework.Task7
             {
                 var empl = new Employee();
                 var line = lines[i];
+                // отдельные элементы разделены знаками табуляции
                 var fields = line.Split(itemSeparator);
+
+                // строковые данные взяты в кавычки
                 empl.Name = fields[0].Trim().Replace(itemQuote.ToString(), string.Empty);
                 empl.Email = fields[1].Trim().Replace(itemQuote.ToString(), string.Empty);
                 empl.Phone = fields[2].Trim().Replace(itemQuote.ToString(), string.Empty);
+                
                 empl.EmailValid = testEmailValid(empl.Email);
                 empl.PhoneValid = testPhoneValid(empl.Phone);
 
