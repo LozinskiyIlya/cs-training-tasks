@@ -14,7 +14,7 @@ namespace Homework.Task7
         private static readonly char itemQuote = '\"';
         private static readonly Regex phoneRegex = new Regex("^\\+?[1-9][0-9]{7,14}$");
         private static readonly Regex emailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
-        public static void Main(string[] args)
+        public static void __Main(string[] args)
         {
             parse(args[0]);
         }
@@ -41,7 +41,7 @@ namespace Homework.Task7
                 empl.Name = fields[0].Trim().Replace(itemQuote.ToString(), string.Empty);
                 empl.Email = fields[1].Trim().Replace(itemQuote.ToString(), string.Empty);
                 empl.Phone = fields[2].Trim().Replace(itemQuote.ToString(), string.Empty);
-                
+
                 empl.EmailValid = testEmailValid(empl.Email);
                 empl.PhoneValid = testPhoneValid(empl.Phone);
 

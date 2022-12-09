@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -55,12 +55,17 @@
     <Compile Include="Task5\PrimeSequence.cs" />
     <Compile Include="Task6\Dictionary.cs" />
     <Compile Include="Task6\Service.cs" />
-    <Compile Include="Task7\CSVParser.cs" />
-    <Compile Include="Task7\Employee.cs" />
+    <Compile Include="Task7\Parser\CSVParser.cs" />
+    <Compile Include="Task7\Parser\Employee.cs" />
+    <Compile Include="Task7\Watcher\Watcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Task7\file.csv" />
+    <None Include="Task7\Parser\file.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Task7\Parser\" />
+    <Folder Include="Task7\Watcher\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
