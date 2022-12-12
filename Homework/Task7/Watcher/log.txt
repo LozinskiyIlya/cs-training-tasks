@@ -1,0 +1,9 @@
+Date:     Time:        File:        ChangeType:
+_________________________________________________
+09 дек. 22, 19:03       Watcher.cs      CREATED
+09 дек. 22, 19:03       Watcher.cs      CREATED
+09 дек. 22, 19:03       Watcher.cs      CREATED
+09 дек. 22, 19:03       Watcher.cs      CREATED
+09 дек. 22, 19:03       Watcher.cs      CREATED
+12 дек. 22, 12:26       Watcher.cs      CREATED
+12 дек. 22, 12:26       Watcher.cs      CREATED

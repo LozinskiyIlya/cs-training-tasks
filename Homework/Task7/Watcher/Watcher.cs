@@ -10,7 +10,7 @@ namespace Homework.Task7
         private StreamWriter logFile;
         private bool disposedValue;
 
-        public static void Main(string[] args)
+        public static void __Main(string[] args)
         {
             new Watcher().Watch(args[0], args[1]);
         }
