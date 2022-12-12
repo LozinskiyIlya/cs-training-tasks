@@ -58,6 +58,7 @@
     <Compile Include="Task7\Parser\CSVParser.cs" />
     <Compile Include="Task7\Parser\Employee.cs" />
     <Compile Include="Task7\Watcher\Watcher.cs" />
+    <Compile Include="Task9\InversedFunctionCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
