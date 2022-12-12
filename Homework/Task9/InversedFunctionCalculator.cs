@@ -1,9 +1,8 @@
 ﻿using System;
-namespace Homework.Task8
+namespace Homework.Task9
 {
     public class InversedFunctionCalculator
     {
-        public delegate decimal Del(decimal x);
 
         public event EventHandler<CalculationEventArgs> CalculationProgress;
 
@@ -23,10 +22,7 @@ namespace Homework.Task8
             public decimal CurrentY { get; set; }
         }
 
-        public static void Main()
-        {
-            Console.WriteLine(new InversedFunctionCalculator().Inverse(2.5m, 3.5m, 8, 0.0001m, x => x * x + (decimal)Math.Sin((double)x - 2)));
-        }
+       
 
         protected virtual void OnCalculationEvent(CalculationEventArgs e)
         {
@@ -125,3 +121,9 @@ namespace Homework.Task8
 //{
 //    return 0;
 //}
+
+/*public static void Main()
+{
+    Console.WriteLine(new InversedFunctionCalculator().Inverse(2.5m, 3.5m, 8, 0.0001m, x => x * x + (decimal)Math.Sin((double)x - 2)));
+    Console.ReadKey();
+}*/
