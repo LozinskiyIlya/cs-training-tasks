@@ -99,31 +99,3 @@ namespace Homework.Task9
 
     }
 }
-
-
-
-//public FunctionInverseer()
-//{
-//    decimal Sin(decimal x)
-//    {
-//        return x;
-//    }
-
-//    Del del = Cbrt;
-//    Inverse(0, 0, 0, 0, Sin);
-//    Inverse(0, 0, 0, 0, delegate (decimal x) { return 0; });
-//    Inverse(0, 0, 0, 0, del.Invoke);
-//    Inverse(0, 0, 0, 0, (x) => 0);
-
-//}
-
-//private decimal Cbrt(decimal x)
-//{
-//    return 0;
-//}
-
-/*public static void Main()
-{
-    Console.WriteLine(new InversedFunctionCalculator().Inverse(2.5m, 3.5m, 8, 0.0001m, x => x * x + (decimal)Math.Sin((double)x - 2)));
-    Console.ReadKey();
-}*/

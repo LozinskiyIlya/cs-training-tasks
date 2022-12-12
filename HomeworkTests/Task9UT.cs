@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Homework.Task9;
 using System;
+using static Homework.Task9.InversedFunctionCalculator;
 
 namespace HomeworkTests
 {
@@ -154,6 +155,23 @@ namespace HomeworkTests
             var actual = (decimal)Math.Log((double)result);
             Assert.IsTrue(y + eps >= actual);
             Assert.IsTrue(y - eps <= actual);
+        }
+
+
+        // Events
+        [TestMethod("Events work")]
+        public void EventWork()
+        {
+            var eps = defaultEps;
+            var calc = new InversedFunctionCalculator();
+            calc.CalculationProgress += OnCalculationEvent;
+            var result = calc.Inverse(0.1m, 1.3m, 0.5m, defaultEps, sin);
+            Console.WriteLine($"result = {result}");
+        }
+
+        private void OnCalculationEvent(object sender, CalculationEventArgs e)
+        {
+            Console.WriteLine($"segment: [{e.A} , {e.B}]    function: f({e.CurrentX}) = {e.CurrentY}");
         }
     }
 }
