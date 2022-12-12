@@ -63,9 +63,6 @@
     <None Include="App.config" />
     <None Include="Task7\Parser\file.csv" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Task7\Parser\" />
-    <Folder Include="Task7\Watcher\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
